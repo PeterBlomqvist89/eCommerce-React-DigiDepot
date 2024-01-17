@@ -1,0 +1,16 @@
+@import '../globalCss.css';
+
+.wc-h1 {
+    color: var(--text-main-color);
+    margin-bottom: 2rem;
+}
+
+.wc-container {
+    padding: 2rem;
+    background-color: var(--bg-main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
