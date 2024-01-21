@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-        {/* <div className="container"> */}
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/productdetail' element={<ProductDetail />} />
@@ -20,7 +19,7 @@ function App() {
 
             <Route path='*' element={ <NotFound /> } />
           </Routes>
-        {/* </div> */}
+      <footer> <p>2024 DigiDepot. All right reserved</p></footer>
     </Router>
   );
 }

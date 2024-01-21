@@ -11,6 +11,12 @@ body {
     color: var(--text-normal-color);
 }
 
+footer {
+    background-color: var(--bg-secondary-color);
+    padding-block: 3rem;
+    text-align: center;
+}
+
 .logo {
     display: flex;
     align-items: center;

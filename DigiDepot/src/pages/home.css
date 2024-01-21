@@ -1,16 +1,41 @@
 @import '../globalCss.css';
+@import url(../);
 
-.wc-h1 {
-    color: var(--text-main-color);
-    margin-bottom: 2rem;
-}
 
-.wc-container {
+.home-container {
     padding: 2rem;
+    position: relative;
     background-color: var(--bg-main-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.home-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: 50% 10%;
+}
+
+.home-textblock {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(36, 36, 36, 0.746);
+    padding: 1rem 2rem;
+}
+
+.home-h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+.home-p {
+    color: white;
+    font-size: 1.6rem;
 }
