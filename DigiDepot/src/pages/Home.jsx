@@ -30,16 +30,22 @@ function Home() {
             <div className="home-textblock">
               <h1 className='home-h1'>Welcome to DigiDepot!</h1>
               <p className='home-p'>Explore a world of digital possibilities with us.</p>
+        </div>
+            <div>
+              <h2 className='home-h2'>Categories</h2>
+                <div className="home-category">
+                  <p className='home-p2'>Laptop</p>
+                  <p className='home-p2'>Phone</p>
+                  <p className='home-p2'>Vacuums</p>
+                  <p className='home-p2'>TV's</p>
             </div>
-            <div className="home-best-collection">
-              <h2 className='home-h2'>Best Collection</h2>
-              <div className="home-product">
+            <div className='shop'>
                   {
                     products.map(product => (
                       <Product key={product._id} product={product}/>
                     ))
                   }
-                </div>
+            </div>
             </div>
         </div>
     </div>

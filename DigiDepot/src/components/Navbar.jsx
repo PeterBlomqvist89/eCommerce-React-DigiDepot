@@ -11,9 +11,9 @@ export const Navbar = () => {
           <h1 className="logo-text">DigiDepot</h1>
           </div>
         <ul className="nav-links">
-          <li><NavLink to="/" className="nav-link"><i class="fa-solid fa-house"></i></NavLink></li>
+          <li><NavLink to="/" className="nav-link"><i className="fa-solid fa-house"></i></NavLink></li>
           {/* <li><NavLink to="/productdetail" className="nav-link">Product Detail</NavLink></li> */}
-          <li><NavLink to="/contactus" className="nav-link"><i class="fa-solid fa-phone"></i></NavLink></li>
+          <li><NavLink to="/contactus" className="nav-link"><i className="fa-solid fa-phone"></i></NavLink></li>
           <li><NavLink to="/checkout" className="nav-link"><i className="fa-solid fa-cart-shopping"></i></NavLink></li>
         </ul>
       </div>
