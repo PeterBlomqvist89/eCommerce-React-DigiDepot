@@ -10,8 +10,8 @@ export const Product = ({ product }) => {
       </div>
       <p><Link to="/productdetail">{product.name}</Link></p>
       <p>{product.description.slice(0, 150)}...</p>
-      <p>{product.price}:-</p>
-      <Link to="/productdetail"><button className='btn-show'>Show</button></Link>
+      <p className='product-price-p'>{product.price}:-</p>
+      <Link to={`/productdetail/${product._id}`}><button className='btn-show'>Show</button></Link>
     </div>
   )
 }

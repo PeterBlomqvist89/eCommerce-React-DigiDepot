@@ -112,3 +112,10 @@
         transition: all 150ms;
      }
 }
+
+.product-price-p {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
