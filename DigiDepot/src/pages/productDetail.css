@@ -12,9 +12,10 @@
         /* text-align: center; */
 }
 
-img {
+.img-pd,
+.pd-img {
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         transition: all 150ms;
      }
 }
@@ -41,7 +42,7 @@ img {
 }
 
 .pd-gallery {
-    width: 60%;
+    width: 80%;
 }
 
 .pd-gallery-preview {
@@ -76,8 +77,8 @@ img {
 }
 
 .pd-btn {
-    width: 50%;
-    padding: .5rem;
+    width: 120px;
+    padding: .6rem;
     border: none;
     cursor: pointer;
     background-color: var(--text-secondary-color);

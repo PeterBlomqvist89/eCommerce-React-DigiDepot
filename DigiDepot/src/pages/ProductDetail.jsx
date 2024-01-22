@@ -46,12 +46,18 @@ function ProductDetail() {
             <h2 className="pd-h2">{product?.name}</h2>
             <div className="pd">
               <div className="pd-gallery">
-                <img className='pd-gallery-preview' src={product.images[0]} alt={product.name} />
-                  <div className="pd-gallery-thumbs">
+                <img className='pd-gallery-preview img-pd' src={product.images[0]} alt={product.name} />
+                <div className="pd-gallery-thumbs">
+                  {product.images && product.images[1] && (
                     <img className='pd-img' src={product.images[1]} alt={product.name} />
+                  )}
+                  {product.images && product.images[2] && (
                     <img className='pd-img' src={product.images[2]} alt={product.name} />
+                  )}
+                  {product.images && product.images[3] && (
                     <img className='pd-img' src={product.images[3]} alt={product.name} />
-                  </div>
+                  )}
+                </div>
                 <p className="pd-name">{product.name}</p>
                 <p className="pd-description">{product.description}...</p>
                 <p className="pd-price">{product.price}:-</p>
