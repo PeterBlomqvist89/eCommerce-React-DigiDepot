@@ -1,0 +1,91 @@
+@import '../globalCss.css';
+
+
+.pd-container {
+        padding: 2rem;
+        position: relative;
+        background-color: var(--bg-main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+}
+
+img {
+    &:hover {
+        transform: scale(1.2);
+        transition: all 150ms;
+     }
+}
+
+.pd-h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* color: var(--text-main-color);
+    background-color: white;
+    display: block;
+    max-width: 1000px; */
+
+}
+
+.pd {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5rem;
+}
+
+.pd-gallery {
+    width: 60%;
+}
+
+.pd-gallery-preview {
+    width: 100%;
+}
+
+.pd-gallery-thumbs {
+    display: flex;
+    width: 100%;
+}
+
+.pd-img {
+    width: 100%;
+}
+
+.pd-name {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.pd-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.pd-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: firebrick;
+    margin-bottom: 2rem;
+}
+
+.pd-btn {
+    width: 50%;
+    padding: .5rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--text-secondary-color);
+    color: white;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: var(--text-main-color);
+        transition: all 150ms;
+     }
+}

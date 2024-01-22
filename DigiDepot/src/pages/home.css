@@ -35,9 +35,20 @@
     font-size: 3rem;
 }
 
+.home-h2 {
+    font-size: 2.4rem;
+    padding: 1rem;
+    
+}
+
 .home-p {
     color: white;
     font-size: 1.6rem;
+}
+
+.home-p2 {
+    font-size: 1rem;
+    font-style: oblique;
 }
 
 .home-category {
@@ -79,9 +90,10 @@
     height: 100%;
     object-fit: contain;
     padding: 1rem;
+    padding-bottom: 1.4rem;
 
      &:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
         transition: all 150ms;
      }
 }

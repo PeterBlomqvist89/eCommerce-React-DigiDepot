@@ -12,10 +12,10 @@ function App() {
     <Router>
       <Navbar />
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/productdetail' element={<ProductDetail />} />
-            <Route path='/contactus' element={<ContactUs />} />
-            <Route path='/checkout' element={<Checkout />} />
+            <Route path='/' element={ <Home /> } />
+            <Route path='/contactus' element={ <ContactUs /> } />
+            <Route path='/checkout' element={ <Checkout /> } />
+            <Route path='/productdetail/:id' element={ <ProductDetail /> } />
 
             <Route path='*' element={ <NotFound /> } />
           </Routes>
