@@ -113,9 +113,23 @@
      }
 }
 
+a {
+    text-decoration: none;
+  }
+
+.product-name-p {
+    font-size: 1.2rem;
+    color: var(--text-main-color);
+    font-weight: 700;
+}
+
 .product-price-p {
     color: black;
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 1rem;
+}
+
+.product-description-p {
+    margin-bottom: .5rem;
 }

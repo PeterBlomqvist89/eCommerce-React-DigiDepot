@@ -8,8 +8,8 @@ export const Product = ({ product }) => {
       <div className="image-container">
         <Link to={`/productdetail/${product._id}`}><img className='product-image' src={product.images[0]} alt={product.name} /></Link>
       </div>
-      <p><Link to="/productdetail">{product.name}</Link></p>
-      <p>{product.description.slice(0, 150)}...</p>
+      <p className='product-name-p'><Link to={`/productdetail/${product._id}`}>{product.name}</Link></p>
+      <p className='product-description-p'>{product.description.slice(0, 150)}...</p>
       <p className='product-price-p'>{product.price}:-</p>
       <Link to={`/productdetail/${product._id}`}><button className='btn-show'>Show</button></Link>
     </div>

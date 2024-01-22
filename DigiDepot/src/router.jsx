@@ -7,6 +7,8 @@ import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
 
 
+
+
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -18,7 +20,7 @@ export const router = createBrowserRouter([
           children: [
             {
               index: true,
-              element: <Home />
+              element: <Home />,
             },
             {
               path: "contact",
