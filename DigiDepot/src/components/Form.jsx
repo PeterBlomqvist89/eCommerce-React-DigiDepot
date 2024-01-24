@@ -2,34 +2,39 @@ import { useFormik } from "formik";
 import { RegisterFormSchema } from "../lib/Schemas"
 import { FormInput } from "./FormInput";
 import axios from 'axios';
+import { Modal } from "./Modal";
+import { useState } from "react";
 
 export const Form = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const form = useFormik({
-      initialValues: {
-        name: '',
-        email: '',
-        message: ''
-      },
-      validationSchema: RegisterFormSchema,
-      onSubmit: async (values) => {
-        try {
-          // Gör en POST-förfrågan med Axios
-          const response = await axios.post('https://js2-ecommerce-api.vercel.app/api/messages', values);
-  
-          // Logga svaret från servern
-          console.log(response.data);
+  const form = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+    validationSchema: RegisterFormSchema,
+    onSubmit: async (values) => {
+      try {
+        const response = await axios.post('https://js2-ecommerce-api.vercel.app/api/messages', values);
+        console.log(response.data);
+        console.log(response);
+        setIsModalOpen(true);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    },
+  });
 
-        } catch (error) {
-          // Hantera fel här
-          console.error('Error:', error);
-        }
-      },
-    });
-  
-    // console.log(form)
-  
-    return (
+
+  const onBack = () => {
+    setIsModalOpen(false);
+    form.resetForm();
+  };
+
+  return (
+    <div>
       <form onSubmit={form.handleSubmit} className="reg-form" noValidate>
         <FormInput
           label="Name"
@@ -61,12 +66,12 @@ export const Form = () => {
           errorMsg={form.errors.message && form.touched.message && form.errors.message}
           onBlur={form.handleBlur}
         />
-        
-     
-      
-  
-        <button type="submit" className="btn-show">Register</button>
-        {/* <p>{JSON.stringify(formData)}</p> */}
+
+        <button type="submit" className="btn-show">
+          Register
+        </button>
       </form>
-    )
-  }
+      <Modal isOpen={isModalOpen} onBack={onBack} />
+    </div>
+  );
+};

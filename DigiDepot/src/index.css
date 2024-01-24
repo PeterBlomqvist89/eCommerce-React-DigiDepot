@@ -72,3 +72,19 @@ footer {
     color: var(--text-main-color);
 }
 
+.modal-bg {
+    position: fixed;
+    inset: 0;
+    background-color: #00000054;
+}
+
+.modal {
+    background-color: white;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 18rem auto;
+}
+
+.modal-message {
+    margin-bottom: 1.2rem;
+}
