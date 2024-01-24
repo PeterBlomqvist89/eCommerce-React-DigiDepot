@@ -27,17 +27,9 @@ function ProductDetail() {
     getProduct()
     
     }, [])
-
-
-
-
-
+    
   return (
     <div>
-
-
-
-
       {loading && <p>Loading...</p>}
       {
         product && (
@@ -66,10 +58,6 @@ function ProductDetail() {
           </div>
           </div>
           </>
-
-
-
-          
       )
     }
     </div>
