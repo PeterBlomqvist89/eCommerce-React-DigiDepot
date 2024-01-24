@@ -1,33 +1,44 @@
 import { useFormik } from "formik";
 import { RegisterFormSchema } from "../lib/Schemas"
 import { FormInput } from "./FormInput";
+import axios from 'axios';
 
 export const Form = () => {
 
     const form = useFormik({
       initialValues: {
-        Name: '',
+        name: '',
         email: '',
         message: ''
       },
       validationSchema: RegisterFormSchema,
-      onSubmit: (values) => {
-        console.log(values)
-      }
-    })
+      onSubmit: async (values) => {
+        try {
+          // Gör en POST-förfrågan med Axios
+          const response = await axios.post('https://js2-ecommerce-api.vercel.app/api/messages', values);
   
-    console.log(form)
+          // Logga svaret från servern
+          console.log(response.data);
+
+        } catch (error) {
+          // Hantera fel här
+          console.error('Error:', error);
+        }
+      },
+    });
+  
+    // console.log(form)
   
     return (
       <form onSubmit={form.handleSubmit} className="reg-form" noValidate>
         <FormInput
           label="Name"
-          id="Name"
-          name="Name"
+          id="name"
+          name="name"
           type="text"
-          value={form.values.Name}
+          value={form.values.name}
           onChange={form.handleChange}
-          errorMsg={form.errors.Name && form.touched.Name && form.errors.Name}
+          errorMsg={form.errors.name && form.touched.name && form.errors.name}
           onBlur={form.handleBlur}
         />
         <FormInput
