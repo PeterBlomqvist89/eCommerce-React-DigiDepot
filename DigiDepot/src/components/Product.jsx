@@ -5,6 +5,7 @@ import '../pages/home.css';
 export const Product = ({ product }) => {
   return (
     <div className="product">
+      <i className="fa-solid fa-square-plus"></i>
       <div className="image-container">
         <Link to={`/productdetail/${product._id}`}><img className='product-image' src={product.images[0]} alt={product.name} /></Link>
       </div>

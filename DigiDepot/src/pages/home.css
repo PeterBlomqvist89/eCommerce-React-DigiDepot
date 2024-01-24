@@ -75,10 +75,27 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     text-align: center;
-    
+
+    &:hover {
+        .fa-square-plus {
+            opacity: 1;
+        }
+    }
 }
+
+.fa-square-plus{
+    opacity: 0;
+    color: var(--text-secondary-color);
+    position:absolute;
+    font-size: 2rem;
+    z-index: 1;
+    cursor: pointer;
+        &:hover {
+            color: var(--text-main-color);
+        }
+}
+
 
 .image-container {
     width: 100%;
