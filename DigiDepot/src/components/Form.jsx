@@ -57,7 +57,7 @@ export const Form = () => {
           onBlur={form.handleBlur}
         />
         <FormInput
-          label="message"
+          label="Your Message:"
           id="message"
           name="message"
           type="text"
