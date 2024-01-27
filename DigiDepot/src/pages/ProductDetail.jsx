@@ -17,7 +17,6 @@ function ProductDetail() {
     
     setLoading(true)
 
-
     const getProduct = async () => {
       const res = await axios.get(`https://js2-ecommerce-api.vercel.app/api/products/${id}`)
       setProduct(res.data)
@@ -28,6 +27,9 @@ function ProductDetail() {
     
     }, [])
     
+  
+
+
   return (
     <div>
       {loading && <p>Loading...</p>}

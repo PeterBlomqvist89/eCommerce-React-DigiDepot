@@ -37,7 +37,7 @@ export const Form = () => {
     <div>
       <form onSubmit={form.handleSubmit} className="reg-form" noValidate>
         <FormInput
-          label="Name"
+          label="Name:"
           id="name"
           name="name"
           type="text"
@@ -47,7 +47,7 @@ export const Form = () => {
           onBlur={form.handleBlur}
         />
         <FormInput
-          label="Email"
+          label="Email:"
           id="email"
           name="email"
           type="email"
@@ -68,7 +68,7 @@ export const Form = () => {
         />
 
         <button type="submit" className="btn-show">
-          Register
+          Send message!
         </button>
       </form>
       <Modal isOpen={isModalOpen} onBack={onBack} />
