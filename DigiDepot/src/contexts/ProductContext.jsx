@@ -1,41 +1,35 @@
-import { createContext, useContext } from "react"
-
-export const ProductContext = createContext()
-
-
-function ProductContextProvider({ children }) {
-  
-  
+import { createContext, useEffect, useState } from "react"
+import axios from 'axios'
 
 
 
 
-
-  
-    
-  const value = {
-    
-  }
+export const ProductContext = createContext();
 
 
+const ProductProvider = ({ children }) => {
+
+
+   const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const res = await axios.get('https://js2-ecommerce-api.vercel.app/api/products');
+            setProducts(res.data);
+         
+        }
+        fetchProducts();
+    }, [])
+
+    const value = {
+        products
+    }
 
   return (
     <ProductContext.Provider value={value}>
-        { children }
+        {children}
     </ProductContext.Provider>
+    
   )
 }
-export default ProductContextProvider
-
-
-
-
-
-
-export const useProductContext = () => {
-  const context = useContext(ProductContext)
-
-  if(!context) throw new Error('useProductsContext must be called within a ProductContextProvider ')
-
-  return context
-}
+export default ProductProvider

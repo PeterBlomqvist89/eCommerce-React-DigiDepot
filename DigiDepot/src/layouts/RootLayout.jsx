@@ -1,17 +1,17 @@
 import { Outlet } from "react-router-dom"
 import { Navbar } from '../components/Navbar'
-import ProductContextProvider from "../contexts/ProductContext"
+import ProductProvider from "../contexts/ProductContext"
 
 function RootLayout() {
   return (
-    <ProductContextProvider>
+    <ProductProvider>
       <div>
           <Navbar />
           <Outlet />
           <footer> <p>2024 DigiDepot. All right reserved</p></footer>
       </div>
 
-    </ProductContextProvider>
+    </ProductProvider>
   )
 }
 export default RootLayout

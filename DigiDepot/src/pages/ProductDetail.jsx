@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import axios from 'axios'
 
 import './productDetail.css';
-import { ProductContext, useProductContext } from "../contexts/ProductContext";
+
 
 
 
@@ -28,9 +28,8 @@ function ProductDetail() {
     
     }, [])
     
-  
-    // const { test } = useContext(ProductContext)
-    // const { test } = useProductContext()
+
+    // const { test } = useProductContext
 
 
 

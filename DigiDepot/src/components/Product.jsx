@@ -3,6 +3,7 @@ import '../pages/home.css';
 
 
 export const Product = ({ product }) => {
+  
   return (
     <div className="product">
       <i className="fa-solid fa-square-plus"></i>

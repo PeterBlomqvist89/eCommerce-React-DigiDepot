@@ -1,26 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { Product } from '../components/Product';
+import { ProductContext } from '../contexts/ProductContext';
 
-import axios from 'axios'
+
 import './home.css';
 
 
 function Home() {
 
-  const [products, setProducts] = useState([])
-  useEffect(() => {
-  
-  const getProducts = async () => {
-    const res = await axios.get('https://js2-ecommerce-api.vercel.app/api/products')
-    setProducts(res.data)
-  }
-  
-  getProducts()
-  
-  }, [])
 
 
-
+  const { products } = useContext(ProductContext)
 
   return (
     <div>
