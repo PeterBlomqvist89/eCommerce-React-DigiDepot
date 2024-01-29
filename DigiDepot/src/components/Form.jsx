@@ -6,6 +6,8 @@ import { Modal } from "./Modal";
 import { useState } from "react";
 
 export const Form = () => {
+
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const form = useFormik({

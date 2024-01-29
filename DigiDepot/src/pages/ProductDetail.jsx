@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from 'axios'
 
 import './productDetail.css';
+import { ProductContext, useProductContext } from "../contexts/ProductContext";
 
 
 
@@ -28,10 +29,15 @@ function ProductDetail() {
     }, [])
     
   
+    // const { test } = useContext(ProductContext)
+    // const { test } = useProductContext()
+
+
 
 
   return (
     <div>
+
       {loading && <p>Loading...</p>}
       {
         product && (
