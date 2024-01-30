@@ -13,7 +13,7 @@ export const Product = ({ product }) => {
   
   return (
     <div className="product">
-      <i onClick={() => addToCart(_id)} className="fa-solid fa-square-plus"></i>
+      <i onClick={() => addToCart(product, _id)} className="fa-solid fa-square-plus"></i>
       <div className="image-container">
         <Link to={`/productdetail/${product._id}`}><img className='product-image' src={product.images[0]} alt={product.name} /></Link>
       </div>
