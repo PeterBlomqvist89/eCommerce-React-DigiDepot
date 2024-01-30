@@ -2,6 +2,7 @@
 import { SidebarContext } from '../contexts/SideBarContext';
 import { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
+import CartItem from './CartItem'
 
 
 
@@ -9,7 +10,7 @@ import { CartContext } from '../contexts/CartContext';
 const Sidebar = () => {
 
     const { isOpen, handleClose } = useContext(SidebarContext)
-     
+     const { cart } = useContext(CartContext)
 
   return (
     <div>
@@ -18,7 +19,10 @@ const Sidebar = () => {
         {isOpen ? 
         <div className='sidebar'>
             <div className="">Shopping bag: (0)</div>
-            <i onClick={handleClose} className="fa-solid fa-arrow-right"></i> 
+            {/* <i onClick={handleClose} className="fa-solid fa-arrow-right"></i>  */}
+            <div>{cart.map((item) => {
+              return <CartItem item={item} key={item._id} />
+            })}</div>
         </div>
         : <div></div>}
         </>

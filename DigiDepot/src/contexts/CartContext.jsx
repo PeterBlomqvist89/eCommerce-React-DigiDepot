@@ -26,11 +26,10 @@ const addToCart = (product, _id) => {
     });
     setCart(newCart);
   } else {
-    // If the item is not in the cart, add it with quantity 1
     setCart([...cart, newItem]);
   }
 };
-console.log(cart);
+// console.log(cart);
 
 
 

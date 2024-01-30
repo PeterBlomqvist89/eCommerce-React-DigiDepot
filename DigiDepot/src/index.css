@@ -103,19 +103,30 @@ footer {
     position: absolute;
     right: 7rem;
     top: 7rem;
-    width: 35vh;
+    width: 55vh;
     height: 600px;
     background-color: var(--bg-third-color);
     border: 1px solid #fefefe;
     z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 300ms;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     padding: 1rem;
     
 
     .fa-arrow-right {
         cursor: pointer;
+    }
+}
+
+
+.cartitem {
+    display: flex;
+    width: 100%;
+    height: 100px;
+
+    .cartimg {
+        width: 80px;
     }
 }
