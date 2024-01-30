@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from 'axios'
 
@@ -29,7 +29,7 @@ function ProductDetail() {
     }, [])
     
 
-    // const { test } = useProductContext
+
 
 
 

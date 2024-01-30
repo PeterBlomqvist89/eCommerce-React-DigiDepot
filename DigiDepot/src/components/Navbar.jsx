@@ -1,6 +1,17 @@
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+import { SidebarContext } from "../contexts/SideBarContext";
+import { useContext } from "react";
 
 export const Navbar = () => {
+
+
+
+
+
+  const {isOpen, setIsOpen} = useContext(SidebarContext)
+
+
+
   return (
     <nav className="navbar">
       <div className="container">
@@ -13,7 +24,7 @@ export const Navbar = () => {
         <ul className="nav-links">
           <li><NavLink to="/" className="nav-link"><i className="fa-solid fa-house"></i></NavLink></li>
           <li><NavLink to="/contact" className="nav-link"><i className="fa-solid fa-phone"></i></NavLink></li>
-          <li><NavLink to="/checkout" className="nav-link"><i className="fa-solid fa-cart-shopping"></i></NavLink></li>
+          <li><i onClick={() => setIsOpen(!isOpen)} className="fa-solid fa-cart-shopping nav-link"></i></li>
         </ul>
       </div>
     </nav>
