@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from 'axios'
 
 import './productDetail.css';
+import { CartContext } from "../contexts/CartContext";
 
 
 
 
 function ProductDetail() {
 
+  const { addToCart } = useContext(CartContext)
 
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -31,6 +33,7 @@ function ProductDetail() {
 
 
 
+    
 
 
 
@@ -60,7 +63,7 @@ function ProductDetail() {
                 <p className="pd-name">{product.name}</p>
                 <p className="pd-description">{product.description}...</p>
                 <p className="pd-price">{product.price}:-</p>
-                <button className='pd-btn'>Add to cart</button>
+                <button onClick={() => addToCart(id)} className='pd-btn'>Add to cart</button>
               </div>
           </div>
           </div>
