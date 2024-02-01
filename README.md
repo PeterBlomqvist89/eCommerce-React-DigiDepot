@@ -1,1 +1,1 @@
-Denna e-handelswebbplats är utvecklad med React Vite som visar grundläggande funktionalitet för att lista produkter, visa detaljer, hantera varukorg och hantera användarkontakt. Context har används för att effektivt hantera tillståndet i applikationen.
+Uppgift i kursen Javascript 2, jag skapade en e-handelswebbplats som är utvecklad med React Vite som visar grundläggande funktionalitet för att lista produkter, visa produkt-detaljer, hantera varukorg och hantera kontaktformulär med validering. Context har används för att effektivt hantera tillståndet i applikationen.
