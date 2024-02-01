@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../contexts/CartContext";
 
 
 
@@ -6,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const CartItem = ({ item }) => {
 
+  const { removeFromCart } = useContext(CartContext)
 
   const { _id, name, price, images, category, description, quantity } = item;
 
@@ -19,9 +22,9 @@ const CartItem = ({ item }) => {
         </Link>
         <div>
           <div>
-          <Link to={`/productdetail/${_id}`}  className="carttext">{name}</Link>
+          <Link to={`/productdetail/${_id}`}  className="carttext">{name.length > 20 ? `${name.slice(0, 30)}...` : name}</Link>
           </div>
-          <div><i className="fa-solid fa-circle-xmark"></i></div>
+          <div><i onClick={() => removeFromCart(_id)} className="fa-solid fa-circle-xmark"></i></div>
           <div className="cartprices">
               <div className="cartplusminus">
                 <div>

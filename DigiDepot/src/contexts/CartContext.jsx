@@ -11,7 +11,7 @@ const CartProvider = ({ children }) => {
 
 const [cart, setCart] = useState([])
 
-
+//Add product to cart
 const addToCart = (product, _id) => {
   const newItem = { ...product, quantity: 1 };
   const cartItem = cart.find(item => item._id === _id);
@@ -29,16 +29,25 @@ const addToCart = (product, _id) => {
     setCart([...cart, newItem]);
   }
 };
-// console.log(cart);
 
 
+
+//Remove from cart
 const removeFromCart = (_id) => {
   const newCart = cart.filter(item => {
     return item._id !== _id;
   });
   setCart(newCart)
-}
+};
 
+
+//Clear cart
+const clearCart = () => {
+  setCart([]);
+};
+
+
+//Increase quantity
 
 
 
@@ -48,7 +57,8 @@ const removeFromCart = (_id) => {
   const value = {
     cart,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    clearCart
   };
 
   return (
