@@ -245,10 +245,20 @@ footer {
     cursor: pointer;
 }
 
+.btnCheckout{
+    border: 0;
+    background-color: rgb(28, 179, 38);
+    padding: .65rem;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    /* font-size: 1.2rem;  */
+}
+
 .itemQuantity {
-    position: absolute;
-    right: 7rem;
-    top: 3.5rem;
+    position: relative;
+    right: 2.4rem;
+    top: -0.6rem;
     background-color: red;
     padding: .2rem;
     width: 20px;
