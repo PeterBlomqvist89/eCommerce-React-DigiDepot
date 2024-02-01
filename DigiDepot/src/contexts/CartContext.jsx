@@ -32,10 +32,23 @@ const addToCart = (product, _id) => {
 // console.log(cart);
 
 
+const removeFromCart = (_id) => {
+  const newCart = cart.filter(item => {
+    return item._id !== _id;
+  });
+  setCart(newCart)
+}
+
+
+
+
+
+
 
   const value = {
     cart,
-    addToCart
+    addToCart,
+    removeFromCart
   };
 
   return (

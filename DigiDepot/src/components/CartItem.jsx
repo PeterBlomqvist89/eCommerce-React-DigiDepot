@@ -23,9 +23,17 @@ const CartItem = ({ item }) => {
           </div>
           <div><i className="fa-solid fa-circle-xmark"></i></div>
           <div className="cartprices">
-              <div>quantity</div>
-              <div>item price</div>
-              <div>final price</div>
+              <div className="cartplusminus">
+                <div>
+                <i className="fa-solid fa-minus"></i>
+                </div>
+                <div>{quantity}st</div>
+                <div>
+                <i className="fa-solid fa-plus"></i>
+                </div>
+              </div>
+              <div className="cartPriceAmout">{price}:-</div>
+              <div className="cartPriceFullAmout">{price * quantity}:-</div>
           </div>
         </div>
       </div>
