@@ -8,7 +8,7 @@ import { CartContext } from "../contexts/CartContext";
 
 const CartItem = ({ item }) => {
 
-  const { removeFromCart } = useContext(CartContext)
+  const { removeFromCart, increaseQuantity, decreaseQuantity } = useContext(CartContext)
 
   const { _id, name, price, images, category, description, quantity } = item;
 
@@ -28,11 +28,11 @@ const CartItem = ({ item }) => {
           <div className="cartprices">
               <div className="cartplusminus">
                 <div>
-                <i className="fa-solid fa-minus"></i>
+                <i onClick={() => decreaseQuantity(_id)} className="fa-solid fa-minus"></i>
                 </div>
                 <div>{quantity}st</div>
                 <div>
-                <i className="fa-solid fa-plus"></i>
+                <i onClick={()=> increaseQuantity(_id)} className="fa-solid fa-plus"></i>
                 </div>
               </div>
               <div className="cartPriceAmout">{price}:-</div>

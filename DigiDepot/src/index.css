@@ -120,15 +120,14 @@ footer {
     }
 }
 
-.shoppingBag{
+.shoppingCart{
     display: flex;
     justify-content: center;
     font-weight: 600;
     font-size: 1.3rem;
-    /* text-decoration: underline; */
     padding-bottom: 1rem;
+    text-transform: uppercase;
     border-bottom: 1px solid rgb(209, 209, 209);
-    /* color: red; */
 }
 
 
@@ -244,4 +243,21 @@ footer {
     /* font-weight: 900;
     font-size: 1.2rem; */
     cursor: pointer;
+}
+
+.itemQuantity {
+    position: absolute;
+    right: 7rem;
+    top: 3.5rem;
+    background-color: red;
+    padding: .2rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: .6rem;
+    font-weight: 700;
 }

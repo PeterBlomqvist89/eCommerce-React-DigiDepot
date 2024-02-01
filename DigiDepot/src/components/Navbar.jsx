@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { SidebarContext } from "../contexts/SideBarContext";
 import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 
 export const Navbar = () => {
 
@@ -8,9 +9,9 @@ export const Navbar = () => {
 
 
 
-  const {isOpen, setIsOpen} = useContext(SidebarContext)
+  const { isOpen, setIsOpen } = useContext(SidebarContext)
 
-
+  const  { itemQuantity } = useContext(CartContext)
 
   return (
     <nav className="navbar">
@@ -25,6 +26,7 @@ export const Navbar = () => {
           <li><NavLink to="/" className="nav-link"><i className="fa-solid fa-house"></i></NavLink></li>
           <li><NavLink to="/contact" className="nav-link"><i className="fa-solid fa-phone"></i></NavLink></li>
           <li><i onClick={() => setIsOpen(!isOpen)} className="fa-solid fa-cart-shopping nav-link"></i></li>
+          <div className="itemQuantity">{itemQuantity}</div>
         </ul>
       </div>
     </nav>

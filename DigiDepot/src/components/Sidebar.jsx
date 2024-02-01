@@ -18,7 +18,7 @@ const Sidebar = () => {
         {isOpen ?<div onClick={handleClose} className='black'>black</div> : <div></div>}
         {isOpen ? 
         <div className='sidebar'>
-            <div className="shoppingBag">Shopping bag: (0)</div>
+            <div className="shoppingCart">Shopping cart: (0)</div>
             {/* <i onClick={handleClose} className="fa-solid fa-arrow-right"></i>  */}
             <div>{cart.map((item) => {
               return <CartItem item={item} key={item._id} />
