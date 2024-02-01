@@ -30,7 +30,7 @@ const Sidebar = () => {
               <div className='sidebarTotalText'>
                 <span>Total:</span>{total}kr
               </div>
-              <Link to="/Checkout"><button className='btnCheckout'>Checkout</button></Link>
+              <Link to="/Checkout"><button className='btnSidebarCheckout'>Checkout</button></Link>
               <div><i onClick={clearCart} className="fa-solid fa-trash-can"></i></div>
             </div>
           </div>

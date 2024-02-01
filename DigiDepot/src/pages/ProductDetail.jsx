@@ -61,7 +61,7 @@ function ProductDetail() {
                   )}
                 </div>
                 <p className="pd-name">{product.name}</p>
-                <p className="pd-description">{product.description}...</p>
+                <p className="pd-description">{product.description}</p>
                 <p className="pd-price">{product.price}:-</p>
                 <button onClick={() => addToCart(product, id)} className='pd-btn'>Add to cart</button>
               </div>

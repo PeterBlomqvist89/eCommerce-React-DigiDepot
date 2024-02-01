@@ -245,6 +245,17 @@ footer {
     cursor: pointer;
 }
 
+.btnSidebarCheckout{
+    border: 0;
+    background-color: rgb(28, 179, 38);
+    padding: .65rem;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    display: block;
+    width: 100px;
+}
+
 .btnCheckout{
     border: 0;
     background-color: rgb(28, 179, 38);
